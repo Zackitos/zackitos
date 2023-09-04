@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Services Order Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./img/logo2.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        form {
+    width: 100%;
+}
+        /* Form container styles */
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #383848;
+            box-shadow: 0 2px 4px #52b0e6;
+            color: #fff;
+        }
+
+        h2 {
+            text-align: center; 
+            margin-bottom: 42px;
+        }
+
+        /* Label and input styles */
+        .form-group {
+            margin-bottom: 20px;
+          
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #52b0e6;
+            border-radius: 5px;
+            background-color: #383848;
+            color: #fff;
+        }
+
+        /* Submit button styles */
+        button {
+            background-color: #52b0e6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #52b0e6; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Programming Services Order </h2>
+        <form action="process_order.php" method="POST">
+            <!-- Label and input for customer's name -->
+            <div class="form-group">
+                <label for="customer_name">Your Name:</label>
+                <input type="text" id="customer_name" name="customer_name" required>
+            </div>
+
+            <!-- Label and input for email address -->
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Label and input for phone number -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <!-- Label and select for service type -->
+            <div class="form-group">
+                <label for="service_type">Select Service Type:</label>
+                <select id="service_type" name="service_type" required>
+                    <option value="web_development">Web Development</option>
+                    <option value="mobile_app_development">Mobile App Development</option>
+                    <option value="software_development">Software Development</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Label and textarea for project description -->
+            <div class="form-group">
+                <label for="project_description">Project Description:</label>
+                <textarea id="project_description" name="project_description" rows="4" required></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>
